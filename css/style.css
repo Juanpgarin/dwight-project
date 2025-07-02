@@ -1,3 +1,44 @@
+.footer {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: transparent;
+  color: black;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.footer__copy {
+  font-weight: bold;
+}
+
+.footer__redes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer__redes a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer__redes a:hover {
+  color: #f3c200;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +47,7 @@
 
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: rgba(243, 191, 2, 0.945);
+  background-color: #f3bf02;
   background-image: url(../img/fondo.jpg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -24,21 +65,22 @@ body img {
   margin: 10px;
   display: block;
 }
+
 header {
   background-color: transparent;
   padding: 1rem;
   box-sizing: border-box;
   color: black;
 }
-.navbar {
+header .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  gap: 60px;
-  
+  gap: 40px;
+  background-color: #f3bf02;
   padding: 1rem;
   color: black;
 }
@@ -55,7 +97,7 @@ header .navbar .nav-link {
   transition: color 0.3s ease;
 }
 header .navbar .nav-link:hover {
-  color: #f3c200;
+  color: #b9b7af;
 }
 
 main {
@@ -81,33 +123,45 @@ main .categorias h2 {
   margin-top: 2rem;
   padding-top: 20px;
   font-weight: bold;
+  text-decoration: underline;
 }
 main .categorias .categoria-menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px 60px;
   max-width: 800px;
-  margin: 5% auto 0;
+  margin: 3% auto 0;
   padding: 40px 20px;
-  background-color: rgb(209, 204, 204);
+  background-color: #e6d54c;
+  border-radius: 30px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
 }
 main .categorias .categoria-menu .categoria-item {
-  background-color: #f3f3f3;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   font-weight: bold;
+  font-size: large;
   border-left: 8px solid #f3c200;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   user-select: none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
 }
 main .categorias .categoria-menu .categoria-item:hover {
-  background-color: #e6d54c;
+  background-color: #f3bf02;
+  border-left: 8px solid black;
 }
 main .destacados {
   margin-top: 5%;
   padding: 20px 0;
+}
+main .destacados h2 {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 10px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 main .destacados .producto-des {
   display: flex;
@@ -145,15 +199,12 @@ main .formulario-contacto {
   margin: 1rem auto;
   padding: 2rem;
   border-radius: 10px;
-  
-  
 }
 main .formulario-contacto .fila {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  
 }
 main .formulario-contacto .fila label {
   font-weight: bold;
@@ -168,7 +219,7 @@ main .formulario-contacto .fila textarea {
   border-radius: 5px;
   resize: vertical;
   font-family: inherit;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 main .formulario-contacto .boton {
   align-self: flex-start;
@@ -179,15 +230,13 @@ main .formulario-contacto .boton {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  transition: background-color 0.5s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 main .formulario-contacto .boton:hover {
   background-color: black;
   color: rgba(243, 191, 2, 0.945);
-  box-shadow: 0 4px 6px rgba(201, 196, 196, 0.5);
 }
-
 
 .footer {
   width: 100%;
@@ -224,7 +273,6 @@ main .formulario-contacto .boton:hover {
 .footer__redes a:hover {
   color: #f3c200;
 }
-
 
 @media (max-width: 768px) {
   body {
